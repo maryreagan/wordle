@@ -44,17 +44,19 @@ window.addEventListener("keyup", (e) => {
             console.log(checkWord, guess)
             for(let i = 0; i < 5; i++){
                 if(checkWord[i] === guess[i]){
-                    letterBoxes[i + minInd].style.backgroundColor = "green"
+                    letterBoxes[i + minInd].style.backgroundColor = "#538d4e"
+                    letterBoxes[i + minInd].style.border = "2px solid #538d4e"
                     checkWord = checkWord.slice(0, i) + " " + checkWord.slice(i + 1)
                 }
             }
             for(let i = 0; i < 5; i++){
                     if(checkWord.includes(guess[i])){
-                        letterBoxes[i + minInd].style.backgroundColor = "yellow"
+                        letterBoxes[i + minInd].style.backgroundColor = "#b59f3b"
+                        letterBoxes[i + minInd].style.border = "2px solid #b59f3b"
                         checkWord = checkWord.replace(guess[i], " ")
                     } else {
-                        if(letterBoxes[i + minInd].style.backgroundColor !== "green"){
-                        letterBoxes[i + minInd].style.backgroundColor = "grey"
+                        if(letterBoxes[i + minInd].style.backgroundColor !== "rgb(83, 141, 78)"){
+                        letterBoxes[i + minInd].style.backgroundColor = "#3a3a3c"
                         checkWord = checkWord.replace(guess[i], " ")
                         }
                     }

@@ -48,6 +48,30 @@
     --svg-arrow-stroke-hover: var(--white);
 }
 .dark {
+    --color-tone-1: var(--newsDarkContentPrimary);
+    --color-tone-2: var(--gray-24);
+    --color-tone-3: var(--gray-25);
+    --color-tone-4: var(--gray-26);
+    --color-tone-5: var(--wordleBlack-2);
+    --color-tone-6: var(--wordleBlack-3);
+    --color-tone-7: var(--wordleBlack-4);
+    --color-tone-8: var(--newsDarkContentPrimary);
+    --color-tone-9: var(--gray-27);
+    --color-tone-10: var(--newsGray-10);
+    --color-tone-11: var(--newsGray-10);
+    --color-tone-12: var(--newsGray-10);
+    --color-nav-hover: var(--wordleBlack-5);
+    --opacity-50: rgba(0, 0, 0, 0.5);
+    --error-background: var(--color-tone-7);
+    --icon-disabled: var(--gray-28);
+    --svg-arrow-fill: var(--black);
+    --svg-arrow-stroke: var(--white);
+    --svg-arrow-fill-hover: var(--white);
+    --svg-arrow-stroke-hover: var(--black);
+    --inline-links: var(--linkDarkBlue);
+    --warning-red: #ea7980;
+}
+.dark {
     --color-present: var(--yellow-4);
     --color-correct: var(--green-4);
     --color-absent: var(--color-tone-4);
@@ -63,7 +87,7 @@
     --modal-content-bg: var(--color-tone-7);
 }
 body{
-    background-color: #1c1c1c;
+    background-color: var(--wordleBlack-4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,21 +100,33 @@ body{
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .idv-guess {
     display: flex;
+    background-color: transparent;
 }
 
 .one-letter {
+    color: var(--white);
+    margin: 2px;
     width: 50px;
     height: 50px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    font-size: 24px;
+    border: 2px solid #3a3a3c;
     text-align: center;
     pointer-events: none;
     font-weight: bolder;
+    background-color: var(--wordleBlack-4);
+}
+.correct{
+    background-color: var(--color-correct);
+}
+.wrong{
+    background-color: var(--color-absent);
+}
+.present{
+    background-color: var(--color-present);
 }
 
 /* The Modal (background) */
@@ -146,13 +182,4 @@ body{
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
-}
-.correct{
-    background-color: var(--color-correct);
-}
-.wrong{
-    background-color: var(--color-absent);
-}
-.present{
-    background-color: var(--color-present);
 }
