@@ -1,0 +1,158 @@
+:root {
+    --green: #6aaa64;
+    --green-4: #538d4e;
+    --wordle-high-contrast-green: #58a351;
+    --spellingBeeYellow: #f7da21;
+    --miniCrosswordBlue: #95befa;
+    --connectionsPeriwinkle: #b4a8ff;
+    --sudoku-orange: #fb9b00;
+    --tiles-green: #b5e352;
+    --dailyCrosswordBlue: #6493e6;
+    --yellow-3: #c9b458;
+    --yellow-4: #b59f3b;
+    --newsGray-10: #dfdfdf;
+    --newsGray-100: #121212;
+    --newsGray-85: #363636;
+    --gray-3: #ccc;
+    --gray-4: #dcdcdc;
+    --gray-6: #f4f4f4;
+    --gray-13: #d3d6da;
+    --gray-18: #787c7e;
+    --gray-19: #878a8c;
+    --gray-20: #edeff1;
+    --gray-21: #f6f7f8;
+    --gray-22: #e3e3e1;
+    --gray-23: #a6a6a6;
+    --gray-24: #818384;
+    --gray-25: #565758;
+    --gray-26: #3a3a3c;
+    --gray-27: #424242;
+    --gray-28: #59595a;
+    --gray-29: #afafaf;
+    --black: #000;
+    --white: #fff;
+    --newsDarkContentPrimary: #f8f8f8;
+    --wordleBlack: #212121;
+    --wordleBlack-2: #272729;
+    --wordleBlack-3: #1a1a1b;
+    --wordleBlack-4: #121213;
+    --wordleBlack-5: #2f2f31;
+    --linkBlue: #346eb7;
+    --linkDarkBlue: #6ba1dd;
+    --orange: #f5793a;
+    --blue: #85c0f9;
+    --outlineBlue: #2671dc;
+    --svg-arrow-fill: var(--white);
+    --svg-arrow-stroke: var(--black);
+    --svg-arrow-fill-hover: var(--black);
+    --svg-arrow-stroke-hover: var(--white);
+}
+.dark {
+    --color-present: var(--yellow-4);
+    --color-correct: var(--green-4);
+    --color-absent: var(--color-tone-4);
+    --tile-text-color: var(--color-tone-1);
+    --key-text-color: var(--color-tone-1);
+    --key-evaluated-text-color: var(--color-tone-1);
+    --key-bg: var(--color-tone-2);
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-absent);
+    --key-evaluated-text-color: var(--color-tone-8);
+    --key-evaluated-text-color-absent: var(--white);
+    --modal-content-bg: var(--color-tone-7);
+}
+body{
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}
+.guess-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.idv-guess {
+    display: flex;
+}
+
+.one-letter {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    text-align: center;
+    pointer-events: none;
+    font-weight: bolder;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#modal-content {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 5% auto;
+    /* 15% from the top and centered */
+    /* padding: 20px; */
+    width: 60%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Could be more or less, depending on screen size */
+}
+.modal-win{
+    background-color: var(--green-4);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.modal-lose{
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.correct{
+    background-color: var(--color-correct);
+}
+.wrong{
+    background-color: var(--color-absent);
+}
+.present{
+    background-color: var(--color-present);
+}
